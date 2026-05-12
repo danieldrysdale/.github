@@ -54,7 +54,7 @@ jobs:
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
-          pytest ${{ inputs.test-path }} -v --tb=short --cov=. --cov-report=term-missing
+          pytest ${{ inputs.test-path }} -v --tb=short
 
   build:
     needs: test
